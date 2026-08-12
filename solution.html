@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Solution — WaterBrooks Technologies</title>
+<meta name="description" content="Solar-powered, IoT-monitored cold storage that extends produce shelf life from 5 to 21 days, plus the education and nutrition programs that make adoption stick.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .steps{ counter-reset: step; display:grid; gap:0; }
+  .step{ display:grid; grid-template-columns:90px 1fr; gap:24px; padding:30px 0; border-top:1px solid var(--line); }
+  .step:last-child{ border-bottom:1px solid var(--line); }
+  .step-num{ font-family:var(--serif); font-size:2.2rem; font-weight:600; color:var(--leaf-light); -webkit-text-stroke:1.4px var(--forest); }
+  .step h3{ font-size:1.2rem; }
+  .step p{ margin-top:8px; color:var(--ink-soft); line-height:1.7; font-size:.97rem; max-width:640px; }
+
+  .feature-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .feature{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:28px; }
+  .feature svg{ width:26px; height:26px; color:var(--forest); }
+  .feature h3{ margin-top:16px; font-size:1.08rem; }
+  .feature p{ margin-top:10px; color:var(--ink-soft); font-size:.92rem; line-height:1.6; }
+
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+  .compare > div{ padding:34px; }
+  .compare .before{ background:#FCEFE7; }
+  .compare .after{ background:var(--leaf-light); }
+  .compare h4{ font-family:var(--mono); font-size:.76rem; text-transform:uppercase; letter-spacing:.06em; }
+  .compare .before h4{ color:var(--wilt); }
+  .compare .after h4{ color:var(--forest); }
+  .compare .big{ font-family:var(--serif); font-size:2.6rem; font-weight:600; margin-top:10px; }
+  .compare .before .big{ color:var(--wilt); }
+  .compare .after .big{ color:var(--forest); }
+  .compare ul{ margin-top:16px; display:grid; gap:8px; }
+  .compare li{ font-size:.9rem; color:var(--ink-soft); padding-left:18px; position:relative; }
+  .compare li::before{ content:'—'; position:absolute; left:0; }
+
+  .edu-grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+  .edu-card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:30px; }
+  .edu-card .n{ font-family:var(--mono); font-size:.72rem; color:var(--sun); text-transform:uppercase; letter-spacing:.06em; }
+  .edu-card h3{ margin-top:10px; font-size:1.18rem; }
+  .edu-card p{ margin-top:10px; color:var(--ink-soft); font-size:.93rem; line-height:1.65; }
+
+  @media(max-width:940px){ .feature-grid{ grid-template-columns:1fr 1fr; } .compare, .edu-grid{ grid-template-columns:1fr; } }
+  @media(max-width:640px){ .feature-grid{ grid-template-columns:1fr; } .step{ grid-template-columns:56px 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Z"/><path d="M5 17c3-1 5-1 7 1"/><path d="M12 17c2-2 4-2 7-1"/></svg></span>
+      <span>waterbrooks<small>Technologies</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="solution.html" class="active">Our Solution</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="gallery.html" class="">Gallery</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <a href="contact.html#involved" class="nav-cta">Get Involved</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="crumb">Our Solution</span>
+    <h1>Off-grid cold storage that runs on sunlight and thinks for itself.</h1>
+    <p>Solar power for reliability, IoT and AI for intelligence, farm-to-market transportation to close the last mile, and training for adoption that lasts. Here's exactly how it works.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="compare reveal">
+      <div class="before">
+        <h4>Without WaterBrooks Technologies</h4>
+        <div class="big">5 days</div>
+        <ul>
+          <li>Average shelf life in tropical heat</li>
+          <li>Forced quick, low-price sales</li>
+          <li>No visibility into storage conditions</li>
+          <li>Reliant on diesel or no storage at all</li>
+        </ul>
+      </div>
+      <div class="after">
+        <h4>With WaterBrooks Technologies</h4>
+        <div class="big">21 days</div>
+        <ul>
+          <li>Shelf life extended up to 4x</li>
+          <li>Spoilage reduced by 60–65%</li>
+          <li>Real-time IoT monitoring, anywhere</li>
+          <li>100% solar-powered, off-grid ready</li>
+          <li>Coordinated transport to market</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>From harvest to sale, in five steps</h2>
+      <p>Every WaterBrooks deployment follows the same path designed so a cooperative or smallholder can adopt it with minimal disruption to how they already work.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div><h3>Solar-powered storage, installed on-site</h3><p>A fully off-grid cold storage unit is deployed close to where produce is harvested or aggregated no dependence on unreliable grid power or costly diesel.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div><h3>Produce goes in, conditions are optimised</h3><p>The unit maintains the temperature and humidity range that keeps each type of produce fresh for as long as physically possible.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div><h3>IoT sensors monitor in real time</h3><p>Connected sensors continuously track storage conditions, sending live data so nothing is left to guesswork.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div><h3>AI turns readings into decisions</h3><p>Predictive insights tell farmers and cooperatives the best time to store, move, or sell reducing uncertainty across the value chain.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div><h3>Training keeps it working</h3><p>Ongoing community support and training ensure the technology is adopted correctly and sustained for the long term.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">06</div>
+        <div><h3>Transported to market, still fresh</h3><p>When it's time to sell, we help coordinate farm-to-market transportation moving produce from the cold storage unit straight to local markets and traders, so the shelf life gained in storage isn't lost again on the road.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What's inside</span>
+      <h2>Built for reliability, designed for scale</h2>
+    </div>
+    <div class="feature-grid reveal">
+      <div class="feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg>
+        <h3>Solar-powered</h3>
+        <p>Runs entirely off-grid, eliminating diesel costs and emissions while staying reliable in rural, low-infrastructure areas.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a5 5 0 0 1 5 5v2h1a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h1V7a5 5 0 0 1 5-5Z"/><path d="M9 9V7a3 3 0 0 1 6 0v2"/></svg>
+        <h3>IoT-enabled monitoring</h3>
+        <p>Live temperature and humidity data, accessible remotely so cooperatives always know exactly what state their produce is in.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 15l3-4 3 3 4-6"/></svg>
+        <h3>AI-driven insight</h3>
+        <p>Predictive analytics that recommend the optimal storage, handling and distribution window for each batch of produce.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l2-7h14l2 7M3 12v7a1 1 0 0 0 1 1h2v-4h12v4h2a1 1 0 0 0 1-1v-7M7 16h.01M17 16h.01"/></svg>
+        <h3>Rural & urban ready</h3>
+        <p>Designed to be deployed close to the farm gate as well as urban aggregation points and markets like Akinyele.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+        <h3>60–65% less spoilage</h3>
+        <p>Measured reduction in produce loss, translating directly into more income retained by farmers and cooperatives.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2 20c0-3 2.5-5 6-5s6 2 6 5M12 20c0-2.5 2-4.5 5-4.5s5 2 5 4.5"/></svg>
+        <h3>Human-centred design</h3>
+        <p>Clean energy and smart systems, backed by training and community support that make adoption practical, not theoretical.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l2-7h14l2 7M3 12v7a1 1 0 0 0 1 1h2v-4h12v4h2a1 1 0 0 0 1-1v-7M7 16h.01M17 16h.01"/></svg>
+        <h3>Farm-to-market transportation</h3>
+        <p>Coordinated transport that carries produce from cold storage to markets and traders, protecting the shelf life gained along the way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Education & community</span>
+      <h2>Technology alone doesn't change behaviour</h2>
+      <p>That's why education and community engagement are built into every deployment through training programs, workshops, and outreach that equip farmers with the knowledge to adopt effective preservation practices.</p>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="n">Training & Workshops</div>
+        <h3>Hands-on preservation training</h3>
+        <p>Farmers and cooperatives learn how to operate storage units, read IoT dashboards, and apply best practices for handling produce before and after storage.</p>
+      </div>
+      <div class="edu-card">
+        <div class="n">Outreach</div>
+        <h3>Community-level engagement</h3>
+        <p>We work directly within farming communities building trust and local ownership so solutions are embraced, not just installed.</p>
+      </div>
+      <div class="edu-card">
+        <div class="n">Nutrition Awareness</div>
+        <h3>Connecting storage to nutrition</h3>
+        <p>Programs that help communities understand the link between reduced food waste, food security, and better nutrition outcomes.</p>
+      </div>
+      <div class="edu-card">
+        <div class="n">Sustained Learning</div>
+        <h3>A culture of learning and collaboration</h3>
+        <p>Ongoing engagement ensures solutions are sustained over time not a one-time installation, but a long-term relationship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center;">
+    <div class="reveal">
+      <span class="eyebrow" style="justify-content:center;">See the results</span>
+      <h2 style="margin-top:14px; font-size:clamp(1.7rem,3.6vw,2.3rem);">200+ farmers already trust this solution</h2>
+      <a href="impact.html" class="btn btn-primary" style="margin-top:22px;">View our impact</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="color:#fff;">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Z"/><path d="M5 17c3-1 5-1 7 1"/><path d="M12 17c2-2 4-2 7-1"/></svg></span>
+          <span>waterbrooks</span>
+        </a>
+        <p>Solar-powered, IoT-enabled cold storage reducing post-harvest losses and building food security across Africa.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="about.html">About Us</a>
+        <a href="solution.html">Our Solution</a>
+        <a href="impact.html">Impact</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <a href="contact.html#involved">Partner with us</a>
+        <a href="contact.html#involved">Support farmer programs</a>
+        <a href="contact.html#involved">Collaborate on innovation</a>
+        <a href="contact.html#involved">Join community initiatives</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:waterbrookstechnologies@gmail.com">waterbrookstechnologies@gmail.com</a>
+        <a href="tel:+2347072925705">+234 707 292 5705</a>
+        <a href="tel:+2347061048743">+234 706 104 8743</a>
+        <a href="#">Aho-Estate, Ajibode, Ibadan, Oyo State</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> WaterBrooks Technologies. All rights reserved.</span>
+      <span>Site by Newton.codes</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/2348140392418" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.87 9.87 0 0 0 4.62 1.13h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14c-.24.67-1.4 1.28-1.94 1.36-.5.08-1.13.11-1.82-.11-.42-.14-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.8 2 .87 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.17-.19.7-.81.89-1.09.19-.28.38-.23.64-.14.26.1 1.66.78 1.94.92.28.14.47.21.54.33.07.12.07.68-.17 1.35Z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
