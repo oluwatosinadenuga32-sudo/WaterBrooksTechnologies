@@ -43,7 +43,7 @@
 <header class="site-header">
   <nav class="nav">
     <a href="index.html" class="brand">
-      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Z"/><path d="M5 17c3-1 5-1 7 1"/><path d="M12 17c2-2 4-2 7-1"/></svg></span>
+      <img src="assets/img/20260607_183112.jpg" alt="WaterBrooks Technologies" style="height:50px; width:54px; border-radius:90%; object-fit:cover;">
       <span>waterbrooks<small>Technologies</small></span>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -158,40 +158,6 @@
     </div>
   </div>
 </section>
-
-<section class="tint">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Our team</span>
-      <h2>A multidisciplinary team, one shared mission</h2>
-      <p>WaterBrooks brings together expertise across agriculture, nutrition, technology, public health and climate science that target post-harvest loss from every angle that matters.</p>
-    </div>
-    <div class="team-grid reveal">
-      <div class="team-card">
-        <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
-        <div class="n">Leadership</div>
-        <div class="r">IoT & Renewable Energy</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
-        <div class="n">Core Team</div>
-        <div class="r">Agriculture & Nutrition</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
-        <div class="n">Core Team</div>
-        <div class="r">Technology & Climate Science</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
-        <div class="n">Advisors & Partners</div>
-        <div class="r">Sustainability & Development</div>
-      </div>
-    </div>
-    <p class="reveal" style="margin-top:30px; max-width:760px; color:var(--ink-soft); line-height:1.75;">This diversity of knowledge allows us to design solutions that are technically sound and genuinely relevant to the communities we serve. In addition to our core team, we're supported by advisors and partners with deep experience in agriculture, sustainability and development, a collaborative network dedicated to improving livelihoods, strengthening food systems, and promoting environmental sustainability.</p>
-  </div>
-</section>
-
 <section>
   <div class="wrap">
     <div class="section-head reveal">
@@ -208,6 +174,70 @@
   </div>
 </section>
 
+
+<section class="tint" id="sdgs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Global alignment</span>
+      <h2>The UN Sustainable Development Goals we advance</h2>
+      <p>WaterBrooks Technologies work sits directly inside the UN's 2030 Agenda every cold storage unit we deploy moves the needle on more than one of these goals at once.</p>
+    </div>
+
+    <div class="sdg-grid reveal">
+      <div class="sdg-card">
+        <div class="sdg-badge" style="background:#DDA63A;">2</div>
+        <h3>Zero Hunger</h3>
+        <p>Reducing post-harvest losses keeps more of what's already grown on the table thereby strengthening food security for farming communities.</p>
+      </div>
+
+      <div class="sdg-card">
+        <div class="sdg-badge" style="background:#FCC30B;">7</div>
+        <h3>Affordable & Clean Energy</h3>
+        <p>Every unit runs entirely on solar power, bringing reliable cold storage to communities with no dependable grid connection.</p>
+      </div>
+
+      <div class="sdg-card">
+        <div class="sdg-badge" style="background:#FD6925;">9</div>
+        <h3>Industry, Innovation & Infrastructure</h3>
+        <p>Solar-powered, IoT-monitored cold storage is resilient agricultural infrastructure built for rural and urban deployment alike.</p>
+      </div>
+
+      <div class="sdg-card">
+        <div class="sdg-badge" style="background:#BF8B2E;">12</div>
+        <h3>Responsible Consumption & Production</h3>
+        <p>Cutting spoilage by 60–65% means less food wasted across the value chain, from farm gate to market.</p>
+      </div>
+
+      <div class="sdg-card">
+        <div class="sdg-badge" style="background:#3F7E44;">13</div>
+        <h3>Climate Action</h3>
+        <p>Off-grid solar storage eliminates the need for diesel-powered cold rooms, cutting carbon emissions at the source.</p>
+      </div>
+
+      <div class="sdg-card">
+        <div class="sdg-badge" style="background:#19486A;">17</div>
+        <h3>Partnerships for the Goals</h3>
+        <p>Built through active collaboration with NGOs, government agencies, cooperatives and sustainability-focused organisations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sdg-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .sdg-card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:28px; transition:transform .25s, box-shadow .25s; }
+  .sdg-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow); }
+  .sdg-badge{
+    width:44px; height:44px; border-radius:10px; color:#fff; font-family:var(--serif);
+    font-weight:700; font-size:1.15rem; display:grid; place-items:center;
+  }
+  .sdg-card h3{ margin-top:16px; font-size:1.05rem; }
+  .sdg-card p{ margin-top:10px; color:var(--ink-soft); font-size:.92rem; line-height:1.6; }
+
+  @media (max-width:940px){ .sdg-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:640px){ .sdg-grid{ grid-template-columns:1fr; } }
+</style>
+
 <section class="tint">
   <div class="wrap" style="text-align:center;" class="reveal">
     <h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem);">Want to know how the technology actually works?</h2>
@@ -220,14 +250,14 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand" style="color:#fff;">
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Z"/><path d="M5 17c3-1 5-1 7 1"/><path d="M12 17c2-2 4-2 7-1"/></svg></span>
+          <img src="assets/img/20260607_183112.jpg" alt="WaterBrooks Technologies" style="height:50px; width:54px; border-radius:90%; object-fit:cover;">
           <span>waterbrooks</span>
         </a>
         <p>Solar-powered, IoT-enabled cold storage reducing post-harvest losses and building food security across Africa.</p>
         <div class="social-row">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
-          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="waterbrooks.technologies" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.linkedin.com/company/waterbrookstechnologies/" target="_blank"  aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+          <a href="https://x.com/Waterbrook51234" aria-label="X / Twitter" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
         </div>
       </div>
       <div>
@@ -254,12 +284,11 @@
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> WaterBrooks Technologies. All rights reserved.</span>
-      <span>Site by Newton.codes</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/2348140392418" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a class="wa-float" href="https://wa.link/kfqzyn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.87 9.87 0 0 0 4.62 1.13h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14c-.24.67-1.4 1.28-1.94 1.36-.5.08-1.13.11-1.82-.11-.42-.14-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.8 2 .87 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.17-.19.7-.81.89-1.09.19-.28.38-.23.64-.14.26.1 1.66.78 1.94.92.28.14.47.21.54.33.07.12.07.68-.17 1.35Z"/></svg>
 </a>
 

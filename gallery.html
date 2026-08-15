@@ -7,7 +7,7 @@
 <meta name="description" content="See WaterBrooks Technologies in action — the farmers and communities we work with, our team, the Akinyele Market feasibility study, and the awards along the way.">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
-  .gallery-toolbar{ display:flex; justify-content:space-between; align-items:center; gap:9px; flex-wrap:wrap; margin:36px 0 34px; }
+  .gallery-toolbar{ display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin:36px 0 34px; }
   .chip-row{ display:flex; gap:8px; flex-wrap:wrap; }
   .chip{ font-family:var(--mono); font-size:.78rem; padding:8px 15px; border-radius:999px; border:1.5px solid var(--line); background:var(--paper); color:var(--ink-soft); transition:.2s; }
   .chip:hover{ border-color:var(--leaf); }
@@ -17,7 +17,7 @@
   .gallery-grid{
     display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:220px; gap:18px;
   }
-  .gitem{ position:relative; border-radius:16px; overflow:hidden; background:var(--leaf-light); cursor:pointer; }
+  .gitem{ position:relative; border-radius:16px; overflow:hidden; background:var(--leaf-light); cursor:pointer; grid-row:span 2; grid-column:span 2;}
   .gitem.tall{ grid-row:span 2; }
   .gitem.wide{ grid-column:span 2; }
   .gitem img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
@@ -37,7 +37,7 @@
     background:linear-gradient(0deg, rgba(18,43,27,.88) 0%, rgba(18,43,27,0) 100%);
     color:#fff; opacity:0; transform:translateY(6px); transition:.25s;
   }
-  .gitem:hover .gcap, .gitem:focus-within .gcap{ opacity:1; transform:none;}
+  .gitem:hover .gcap, .gitem:focus-within .gcap{ opacity:1; transform:none; }
   .gcap .t{ font-family:var(--serif); font-weight:600; font-size:1rem; line-height:1.3; }
   .gcap .s{ font-family:var(--mono); font-size:.68rem; letter-spacing:.04em; text-transform:uppercase; color:var(--sun-light); margin-top:4px; }
 
@@ -62,11 +62,13 @@
 
   @media(max-width:980px){
     .gallery-grid{ grid-template-columns:repeat(3,1fr); grid-auto-rows:190px; }
+    
   }
   @media(max-width:720px){
-    .gallery-grid{ display: flex; flex-direction: column; }
-    .gitem.wide{ grid-column:span 2; }
+    .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:170px; }
+    .gitem.wide{ grid-column:span 2;  }
     .gitem.tall{ grid-row:span 1; }
+    
   }
   @media(max-width:480px){
     .gallery-grid{ grid-template-columns:1fr 1fr; grid-auto-rows:150px; }
@@ -78,7 +80,7 @@
 <header class="site-header">
   <nav class="nav">
     <a href="index.html" class="brand">
-      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Z"/><path d="M5 17c3-1 5-1 7 1"/><path d="M12 17c2-2 4-2 7-1"/></svg></span>
+      <img src="assets/img/20260607_183112.jpg" alt="WaterBrooks Technologies" style="height:50px; width:54px; border-radius:90%; object-fit:cover;">
       <span>waterbrooks<small>Technologies</small></span>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -86,7 +88,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="solution.html">Our Solution</a></li>
       <li><a href="impact.html">Impact</a></li>
-      <li><a href="gallery.html" class="">Gallery</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -103,12 +105,12 @@
   <div class="wrap">
     <span class="crumb">Gallery</span>
     <h1>The proof, in pictures.</h1>
-    <p>Farmers and communities we work with.</p>
+    <p>Farmers and communities we work with, the team behind the technology, the market where it all started, and the recognition along the way.</p>
   </div>
 </section>
 
 <section>
-  <!-- <div class="wrap">
+  <div class="wrap">
     <div class="gallery-toolbar">
       <div class="chip-row" id="galleryChips">
         <button type="button" class="chip active" data-filter="all">All</button>
@@ -117,89 +119,71 @@
         <button type="button" class="chip" data-filter="market">Akinyele Market</button>
         <button type="button" class="chip" data-filter="awards">Awards & Recognition</button>
       </div>
-    </div> -->
+    </div>
 
     <div class="gallery-grid" id="galleryGrid">
 
       <!-- FARMERS & COMMUNITY ============================================ -->
-
-        <figure class="gitem wide tall" data-cat="farmers" tabindex="0">
-        <img src="assets/img/P1340359.jpg" alt="Farmers WaterBrooks works with in Oyo State" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-4-4 3-3-2-6 4"/></svg><span class="fname">assets/img/farmers-01.jpg</span></div>
-        <figcaption class="gcap"><div class="t"></div><div class="s">Farmers & Community</div></figcaption>
-      </figure>
-
       <figure class="gitem wide tall" data-cat="farmers" tabindex="0">
-        <img src="assets/img/P1340288.jpg" alt="Farmers WaterBrooks works with in Oyo State" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="assets/img/P1340357.jpg" alt="Farmers WaterBrooks works with in Oyo State" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-4-4 3-3-2-6 4"/></svg><span class="fname">assets/img/farmers-01.jpg</span></div>
-        <figcaption class="gcap"><div class="t">Talking to farmers</div><div class="s">Farmers & Community</div></figcaption>
+        <figcaption class="gcap"><div class="t">Where it all starts — the farm</div><div class="s">Farmers & Community</div></figcaption>
       </figure>
 
       <figure class="gitem" data-cat="farmers" tabindex="0">
-        <img src="assets/img/P1340315.jpg" alt="A farmer harvesting produce" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="assets/img/P1340312.jpg" alt="A farmer harvesting produce" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-4-4 3-3-2-6 4"/></svg><span class="fname">assets/img/farmers-02.jpg</span></div>
-        <figcaption class="gcap"><div class="t"></div><div class="s">Farmers & Community</div></figcaption>
+        <figcaption class="gcap"><div class="t">Fresh off the harvest</div><div class="s">Farmers & Community</div></figcaption>
       </figure>
 
       <figure class="gitem" data-cat="farmers" tabindex="0">
-        <img src="assets/img/P1340300.jpg" alt="A farming community WaterBrooks serves" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="assets/img/P1340348.jpg" alt="A farming community WaterBrooks serves" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-4-4 3-3-2-6 4"/></svg><span class="fname">assets/img/farmers-03.jpg</span></div>
         <figcaption class="gcap"><div class="t">One of 200+ farmers we work with</div><div class="s">Farmers & Community</div></figcaption>
       </figure>
 
-      <figure class="gitem" data-cat="farmers" tabindex="0">
-        <img src="assets/img/P1340302.jpg" alt="Community engagement session" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-4-4 3-3-2-6 4"/></svg><span class="fname">assets/img/farmers-04.jpg</span></div>
-        <figcaption class="gcap"><div class="t">Listening first, building second</div><div class="s">Farmers & Community</div></figcaption>
-      </figure>
-
       <!-- TEAM ============================================================ -->
-      <figure class="gitem" data-cat="team" tabindex="0">
-        <img src="assets/img/P1340311.jpg" alt="WaterBrooks team member" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg><span class="fname">assets/img/team-01.jpg</span></div>
-        <figcaption class="gcap"><div class="t">One of 200+ farmers we work with</div><div class="s">Farmers & Community</div></figcaption>
-      </figure>
 
       <figure class="gitem wide" data-cat="team" tabindex="0">
-        <img src="assets/img/P1340304.jpg" alt="WaterBrooks team on-site" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img style="min-height:70vh;"  src="assets/img/Dr. Praise-God Adesoji.jpeg" alt="WaterBrooks team on-site" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg><span class="fname">assets/img/team-02.jpg</span></div>
         <figcaption class="gcap"><div class="t">On-site, where the work happens</div><div class="s">Our Team</div></figcaption>
       </figure>
 
       <figure class="gitem" data-cat="team" tabindex="0">
-        <img src="assets/img/P1340306.jpg" alt="WaterBrooks leadership" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="assets/img/Bakare Samson Oluwafemi.jpg" alt="WaterBrooks leadership" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg><span class="fname">assets/img/team-03.jpg</span></div>
         <figcaption class="gcap"><div class="t">IoT & renewable energy leadership</div><div class="s">Our Team</div></figcaption>
       </figure>
 
-      <!-- AKINYELE MARKET ================================================= -->
-      <figure class="gitem tall" data-cat="market" tabindex="0">
-        <img src="assets/img/P1340359.jpg" alt="Akinyele Market feasibility study" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <figure class="gitem" data-cat="team" tabindex="0">
+        <img src="assets/img/Last weekend, the Waterbrooks Technologies team had the opportunity to pitch our agritech innov.webp" alt="Community engagement session" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-4-4 3-3-2-6 4"/></svg><span class="fname">assets/img/farmers-04.jpg</span></div>
+        <figcaption class="gcap"><div class="t">Listening first, building second</div><div class="s">Farmers & Community</div></figcaption>
+      </figure>
+
+      <!-- AKINYELE MARKET ================================================ -->
+      <figure class="gitem wide tall" data-cat="market" tabindex="0">
+        <!-- <video src="assets/img/WhatsApp Video 2026-08-14 at 9.49.21 AM.mp4" alt="Akinyele Market feasibility study" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"> -->
+          <video controls width="600">
+            <source src="assets/img/WhatsApp Video 2026-08-14 at 9.49.21 AM.mp4" type="video/mp4">
+          </video>
         <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><span class="fname">assets/img/akinyele-01.jpg</span></div>
-        <figcaption class="gcap"><div class="t">Akinyele Farmers the Southwest Nigeria's largest</div><div class="s">Feasibility Study</div></figcaption>
+        <figcaption class="gcap"><div class="t">Akinyele Market — Southwest Nigeria's largest</div><div class="s">Feasibility Study</div></figcaption>
       </figure>
 
-      <figure class="gitem" data-cat="market" tabindex="0">
-        <img src="assets/img/P1340357.jpg" alt="Traders at Akinyele Market" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><span class="fname">assets/img/akinyele-02.jpg</span></div>
-        <figcaption class="gcap"><div class="t">Talking to traders on the ground</div><div class="s">Feasibility Study</div></figcaption>
+      <!-- AWARDS & RECOGNITION ============================================ -->
+      <figure class="gitem wide" data-cat="awards" tabindex="0">
+        <img src="assets/img/IMG_20251207_114127 - Copy.jpg" alt="Favoured Fund Pitch win in Lagos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="6"/><path d="M9 14.5L7 22l5-3 5 3-2-7.5"/></svg><span class="fname">assets/img/award-favoured-fund.jpg</span></div>
+        <figcaption class="gcap"><div class="t">Winner — Favoured Fund Pitch, Lagos</div><div class="s">₦1.5 Million in Funding</div></figcaption>
       </figure>
 
-      <figure class="gitem" data-cat="market" tabindex="0">
-        <img src="assets/img/P1340354.jpg" alt="Produce at Akinyele Market" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><span class="fname">assets/img/akinyele-03.jpg</span></div>
-        <figcaption class="gcap"><div class="t">Talking to traders on the ground</div><div class="s">Feasibility Study</div></figcaption>
-      </figure>
-
-
-
-
-      
-
-
-
+ 
     </div>
 
+    </div>
+  </div>
 </section>
 
 <section class="tint">
@@ -216,14 +200,14 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand" style="color:#fff;">
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Z"/><path d="M5 17c3-1 5-1 7 1"/><path d="M12 17c2-2 4-2 7-1"/></svg></span>
+          <img src="assets/img/20260607_183112.jpg" alt="WaterBrooks Technologies" style="height:50px; width:54px; border-radius:90%; object-fit:cover;">
           <span>waterbrooks</span>
         </a>
         <p>Solar-powered, IoT-enabled cold storage — reducing post-harvest losses and building food security across Africa.</p>
         <div class="social-row">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
-          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="waterbrooks.technologies" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.linkedin.com/company/waterbrookstechnologies/" target="_blank"  aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+          <a href="https://x.com/Waterbrook51234" aria-label="X / Twitter" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
         </div>
       </div>
       <div>
@@ -251,12 +235,11 @@
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> WaterBrooks Technologies. All rights reserved.</span>
-      <span>Site by Newton.codes</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/2348140392418" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a class="wa-float" href="https://wa.link/kfqzyn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.35a9.87 9.87 0 0 0 4.62 1.13h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14c-.24.67-1.4 1.28-1.94 1.36-.5.08-1.13.11-1.82-.11-.42-.14-.96-.31-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.8 2 .87 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.17-.19.7-.81.89-1.09.19-.28.38-.23.64-.14.26.1 1.66.78 1.94.92.28.14.47.21.54.33.07.12.07.68-.17 1.35Z"/></svg>
 </a>
 

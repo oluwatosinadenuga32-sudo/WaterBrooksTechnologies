@@ -37,6 +37,10 @@
   --shadow-sm: 0 8px 20px -12px rgba(18,43,27,.25);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 cite{
   font-weight: 700px;
 }
