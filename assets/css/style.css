@@ -139,6 +139,12 @@ input,textarea,select{ font-family:inherit; }
     display:grid; place-items:center; width:40px; height:40px; border-radius:10px;
     background:var(--leaf-light); border:none; color:var(--forest-deep);
   }
+  .nav-cta{
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--sun); color:#fff; padding:7px 17px; border-radius:999px; margin-left: 50px;
+  font-weight:600; font-size:.9rem; box-shadow:var(--shadow-sm);
+  transition:transform .2s, box-shadow .2s;
+  }
 }
 
 /* ---------------------------------------------------------
